@@ -13,7 +13,7 @@ import EventKit
 /// Your `Calendar` class must conform to this protocol.
 public protocol SKCalendar: class {
     /// Should contain key informations for easy understanding.
-    var debugDescription: String { get set }
+    var debugDescription: String? { get set }
     /// It must be `EKCalendar` identifier.
     var calendarIdentifier: String { get set }
     /// Default is `true`. If this variable is set to false, the calendar will not be considered for sincronyzathion.
