@@ -13,7 +13,7 @@ import EventKit
 /// Your `Event` class must conform to this protocol.
 public protocol SKEvent: class {
     /// Should contain key informations for easy understanding.
-    var debugDescription?: String { get set }
+    var debugDescription: String? { get set }
     /// It must be `EKEvent` identifier.
     var eventIdentifier: String { get set }
     /// It must be `EKEvent` lastModifiedDate.
