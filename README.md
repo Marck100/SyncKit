@@ -37,11 +37,11 @@ class Event: SKEvent {
 let comparison = SKCenter.shared.compareCalendars(calendars: systemCalendars, storedCalendars: storedCalendars)
 ```
 
-4. Update your storage
+4. Update your app
 ```swift
-storage.save(comparison.calendarsToSave)
-storage.update(comparison.calendarsToUpdate)
-storage.remove(comparison.calendarsToDelete)
+db.save(comparison.calendarsToSave)
+db.update(comparison.calendarsToUpdate)
+db.remove(comparison.calendarsToDelete)
 ```
 
 
