@@ -11,7 +11,7 @@ import EventKit
 
 /// Result of comparison between calendars stored in your database and system calendars.
 public struct CalendarsComparison {
-    let calendarsToSave: [EKCalendar]
-    let calendarsToEdit: [SKCalendar]
-    let calendarsToDelete: [SKCalendar]
+    public let calendarsToSave: [EKCalendar]
+    public let calendarsToEdit: [SKCalendar]
+    public let calendarsToDelete: [SKCalendar]
 }
