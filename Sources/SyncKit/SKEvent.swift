@@ -38,7 +38,7 @@ public protocol SKEvent: class {
 }
 
 // Default implementation
-extension SKEvent {
+public extension SKEvent {
     var store: EKEventStore {
         return SKCenter.shared.store
     }

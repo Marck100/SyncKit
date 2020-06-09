@@ -36,7 +36,7 @@ public protocol SKCalendar: class {
 }
 
 // Default implementation
-extension SKCalendar {
+public extension SKCalendar {
     var store: EKEventStore {
         return SKCenter.shared.store
     }
