@@ -11,7 +11,7 @@ import EventKit
 
 /// Result of comparison between events stored in your database and system events.
 public struct EventsComparison {
-    let eventsToSave: [EKEvent]
-    let eventsToEdit: [SKEvent]
-    let eventsToDelete: [SKEvent]
+    public let eventsToSave: [EKEvent]
+    public let eventsToEdit: [SKEvent]
+    public let eventsToDelete: [SKEvent]
 }
