@@ -88,9 +88,9 @@ final public class SKCenter {
             return calendars
         }()
         // To edit
-        let calendarsToEdit: [SKCalendar] = {
-            let calendars = storedCalendarsToCompare.filter { (storedCalendar) -> Bool in
-                return calendarsToCompare.contains(where: { storedCalendar.calendarIdentifier == $0.calendarIdentifier && storedCalendar.changesFrom($0) })
+        let calendarsToEdit: [EKCalendar] = {
+            let calendars = calendarsToCompare.filter { (calendar) -> Bool in
+                return storedCalendars.contains(where: { calendar.calendarIdentifier == $0.calendarIdentifier && $0.changesFrom(calendar) })
             }
             return calendars
         }()
@@ -168,9 +168,9 @@ final public class SKCenter {
             return events
         }()
         // To edit
-        let eventsToEdit: [SKEvent] = {
-            let events = storedEventsToCompare.filter { (storedEvent) -> Bool in
-                return eventsToCompare.contains(where: { storedEvent.eventIdentifier == $0.eventIdentifier && storedEvent.changesFrom($0) })
+        let eventsToEdit: [EKEvent] = {
+            let events = eventsToCompare.filter { (event) -> Bool in
+                return storedEventsToCompare.contains(where: { event.eventIdentifier == $0.eventIdentifier && $0.changesFrom(event) })
             }
             return events
         }()
